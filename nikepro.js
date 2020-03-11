@@ -95,12 +95,14 @@ const aoShoes = [
 function createShoesDisplay() {
     aoShoes.forEach(shoe => {
         const shoeHTML = `
-        <article>
+        <article class="card">
             <img src="${shoe.img}" alt="${shoe.alt}">
             <h2>${shoe.name}</h2>
             <p>${shoe.description}</p>
-            <h3></h3>
-            <input type="submit" value="+ Tilføj til kurv">
+            <div>
+                <h3>${shoe.price} kr</h3>
+                <input type="submit" value="+ Tilføj til kurv" class="btnAddCart">
+            </div>
         </article>
         `;
         // turns string into a DOM element
@@ -128,6 +130,7 @@ function createCart() {
     const cartHTML = `
         <article id="cart">
             <h1>Kurv</h1>
+            <h2>Total: 0</h2>
             <input type="submit" value="Gå til betaling">
         </article>
     `;
