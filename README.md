@@ -17,7 +17,7 @@ Before  I start I'm making a checklist based on the exam document, making sure I
 * Set up the HTML
     *  Created header, main, header, aside, footer
 * Set up the JS file
-    * Set up array objects injavascript for generating shoes.
-
+    * Set up an array of objects in javascript for generating shoes.
+* Write alt for each shoe in shoes.txt.
 
 * Create CSS sheet
