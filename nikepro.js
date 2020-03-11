@@ -1,5 +1,7 @@
 console.log("I'm here!");
-
+const mainDisplay = document.querySelector('main');
+const asideCart = document.querySelector('aside');
+const cart = document.querySelector('#cart');
 // Array of objects 
 // namegiving - a = array, o = object(s)
 const aoShoes = [
@@ -85,3 +87,51 @@ const aoShoes = [
 
     // },
 ]
+
+
+// function that creates and renders shoe elements in browser
+function createShoesDisplay() {
+    aoShoes.forEach(shoe => {
+        const shoeHTML = `
+        <article>
+            <img src="${shoe.img}" alt="${shoe.alt}">
+            <h2>${shoe.name}</h2>
+            <p>${shoe.description}</p>
+            <h3></h3>
+            <input type="submit" value="+ Tilføj til kurv">
+        </article>
+        `;
+        // turns string into a DOM element
+        const shoeFragment = document.createRange().createContextualFragment(shoeHTML);
+        mainDisplay.append(shoeFragment);
+    })
+}
+
+// function createShoesCart() {
+//     const shoeHTML = `
+//         <img src="${shoe.img}" alt="${shoe.alt}">
+//         <div>
+//             <h2>${shoe.name}</h2>
+//             <h5>Antal: </h5>
+//         </div>   
+//     `;
+//     const cartFragment = document.createRange().createContextualFragment(shoeHTML);
+//     cart.append(cartFragment);
+// }
+
+function createCart() {
+    const cartHTML = `
+        <article id="cart">
+            <h1>Kurv</h1>
+            <input type="submit" value="Gå til betaling">
+        </article>
+    `;
+    const cartFragment = document.createRange().createContextualFragment(cartHTML);
+    asideCart.append(cartFragment);
+}
+
+// Runs when window is fully loaded.
+window.addEventListener('load', (event) => {
+    createShoesDisplay();
+    createCart();
+});
