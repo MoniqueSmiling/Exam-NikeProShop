@@ -19,5 +19,7 @@ Before  I start I'm making a checklist based on the exam document, making sure I
 * Set up the JS file
     * Set up an array of objects in javascript for generating shoes.
 * Write alt for each shoe in shoes.txt.
-
+* create js functions needed for generating the HTML in page
 * Create CSS sheet
+    * Find fonts on Google Fonts and @import into CSS sheet
+    * add :root element and add variables holding colors, fonts etc. from the "2020-1-M1-V2-KLJO-eksamensopgave Shopping cart" document.

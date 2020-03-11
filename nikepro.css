@@ -1,3 +1,52 @@
-* {
-    /* background-color: red; */
+@import url('https://fonts.googleapis.com/css?family=Cormorant:400,700|Montserrat:400,500&display=swap');
+
+:root {
+
+    /* FONT FAMILY */
+    --font-cormorant: 'Cormorant', serif;
+    --font-montserrat: 'Montserrat', sans-serif;
+
+    /* COLORS */
+    --color-border-btn: #969696;
+    --color-text-dark-btn: #333333;
+    --color-white-card-bg: #FDFDFD;
+    --color-gray-bg: #F5F5F5;
+}
+
+body {
+    background-color: var(--color-gray-bg);
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text-dark-btn);
+}
+
+/* ----------------
+    Navigation
+-----------------*/
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li a {
+    color: red;
+}
+
+
+
+
+
+/* ---------------------------
+
+----------------------------*/
+
+article {
+    background-color: var(--color-white-card-bg);
 }

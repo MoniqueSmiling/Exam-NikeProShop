@@ -89,6 +89,8 @@ const aoShoes = [
 ]
 
 
+// SHOES 
+
 // function that creates and renders shoe elements in browser
 function createShoesDisplay() {
     aoShoes.forEach(shoe => {
@@ -114,6 +116,9 @@ function createShoesDisplay() {
 //             <h2>${shoe.name}</h2>
 //             <h5>Antal: </h5>
 //         </div>   
+//         <div>
+//              
+//         </div>
 //     `;
 //     const cartFragment = document.createRange().createContextualFragment(shoeHTML);
 //     cart.append(cartFragment);
