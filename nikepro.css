@@ -133,6 +133,7 @@ article {
 
 
 #cart>h1 {
+    display: grid;
     font-family: var(--font-cormorant);
     font-size: 16pt;
 }
@@ -141,7 +142,7 @@ article {
     background-color: var(--color-text-dark-btn);
     color: var(--color-white-card-bg);
     font-family: var(--font-montserrat);
-    padding: 10px 10px;
+    padding: 15px 15px;
     font-size: 10pt;
 }
 
@@ -188,5 +189,15 @@ footer {
         display: grid;
         grid-template-columns: repeat(3, auto);
         grid-gap: 5%;
+    }
+
+    #basket {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #basket>div {
+        display: flex;
+        flex-direction: row;
     }
 }

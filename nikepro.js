@@ -86,8 +86,9 @@ const aoShoes = [
     //     price:,
 
     // },
-]
+];
 
+let aoShoesIdInBasket = [];
 
 // SHOES 
 
@@ -128,7 +129,7 @@ function createCart() {
 
 // Function to create the shoes html for cart 
 function createShoesForCart(shoe) {
-    shoe = shoe;
+    window.localStorage.setItem('item', JSON.stringify(aoShoesIdInBasket));
     const shoeHTML = `
         <img src="${shoe.img}" alt="${shoe.alt}">
         <div>
@@ -144,13 +145,10 @@ function createShoesForCart(shoe) {
 }
 
 
-// Function to add Shoes to Cart
-function addShoesToCart(id) {
-    
-}
 
 // Function handling buttonClick
 function handleBuyButtonClick(e) {
+    aoShoesIdInBasket.push(aoShoes[e.currentTarget.id])
    console.log(e.currentTarget.id);
    createShoesForCart(aoShoes[e.currentTarget.id]);
 }
@@ -160,6 +158,8 @@ function handleBuyButtonClick(e) {
 window.addEventListener('load', (event) => {
     createShoesDisplay();
     createCart();
+    let itemsInBasket = JSON.parse(window.localStorage.getItem('item'));
+    console.log(itemsInBasket);
     const basket = document.querySelector('#basket');
     const btnAddToCart = document.querySelectorAll('.btnAddToCart');
     btnAddToCart.forEach(function(buyButton) {
